@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<script>(function(){try{var t=localStorage.getItem('mr-theme');if(t!=='light'&&t!=='dark'){t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mohamed Riyaz M | Full Stack Developer</title>
+<meta name="description" content="Mohamed Riyaz M is a full stack developer working in the MERN stack and Python. Junior developer at Dafy Online, and the builder of TestCraft, an AI assessment generator for state-board classrooms.">
+<meta name="author" content="Mohamed Riyaz M">
+<meta property="og:title" content="Mohamed Riyaz M | Full Stack Developer">
+<meta property="og:description" content="React and Node on the web, Python where the data is. Junior developer at Dafy Online, and the builder of TestCraft.">
+<meta property="og:type" content="profile">
+<meta name="theme-color" content="#0d5a42">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='26' fill='%230d5a42'/><text y='67' x='50' text-anchor='middle' font-family='Helvetica,Arial' font-size='44' font-weight='700' fill='%23fff'>MR</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400..700&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..600&family=Noto+Sans+Tamil:wght@400..600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip" href="#work">Skip to the work</a>
+
+<header class="topbar" id="topbar">
+  <div class="topbar-in">
+    <a class="mark" href="#top">
+      <span class="mark-badge" aria-hidden="true">MR</span>
+      <span>Mohamed Riyaz&nbsp;M</span>
+    </a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#work">Work</a>
+      <a href="#experience">Experience</a>
+      <a href="#stack">Stack</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button id="theme" class="tswitch" type="button" aria-label="Switch to dark theme">
+      <svg class="ti ti-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"/></svg>
+      <svg class="ti ti-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.2 8.2 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5z"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero wrap" id="hero">
+    <p class="hero-name rise">Mohamed Riyaz M</p>
+    <h1 class="h1 rise">Full stack developer<em>who stays for the unglamorous ninety percent.</em></h1>
+    <p class="hero-lede rise">React and Node on the web, Python where there is data to shape. I am a junior developer at <strong>Dafy Online</strong> in Cochin, working on admin tooling that real teams use every day &mdash; and on my own time I build things that produce something at the end: a booked appointment, a ranked list, a question paper ready for the printer.</p>
+    <div class="cta rise">
+      <a class="btn btn-solid" href="mailto:mohamedriyaz0666@gmail.com">Email Riyaz</a>
+      <a class="btn" href="assets/Mohamed_Riyaz_M_Resume.pdf" download>Resume <span aria-hidden="true">&#8595;</span></a>
+      <a class="btn" href="https://github.com/RiyazHaroon5347" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn" href="https://www.linkedin.com/in/mohamed-riyaz-m-76909923a" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <p class="now rise">
+      <span><i class="dot" aria-hidden="true"></i><b>Junior Developer, Dafy Online Pvt Ltd</b> &mdash; Cochin, since October 2025</span>
+      <span>B.Tech, Artificial Intelligence and Data Science</span>
+      <span>Tenkasi, Tamil Nadu</span>
+    </p>
+  </section>
+
+  <!-- ===================== WORK ===================== -->
+  <section class="sec wrap" id="work">
+    <div class="sechead">
+      <h2>The work</h2>
+      <p>Three things I built end to end</p>
+    </div>
+
+    <div class="flag-top">
+      <div>
+        <h3 class="flag-title">TestCraft</h3>
+        <p class="flag-kicker">An assessment generator for state-board classrooms</p>
+        <p>Writing a question paper by hand is a slow, fiddly job. A teacher has to hold the whole blueprint in their head &mdash; how many one-mark questions, which chapters are in scope this term, how the marks add to a hundred &mdash; and then type the thing out and format it so it prints cleanly.</p>
+        <p>TestCraft takes the blueprint as input instead. You tick the chapters you have covered, choose the paper you want, and it plans the parts, fills each slot with questions drawn from those chapters, and lays the result out ready for the photocopier. It is built for the Tamil Nadu Samacheer Kalvi Class&nbsp;10 syllabus, across all five subjects, in English medium, Tamil medium or both side by side.</p>
+        <p>The interesting part is not the prompt. It is the contract around it: Gemini Flash is asked for a strict JSON object matching the blueprint the app has already decided on, so the generated paper is checked against the plan before a single line reaches the page.</p>
+      </div>
+      <dl class="spec">
+        <div><dt>Built with</dt><dd>Next.js</dd></div>
+        <div><dt>State</dt><dd>Zustand</dd></div>
+        <div><dt>Generation</dt><dd>Gemini Flash, structured JSON output</dd></div>
+        <div><dt>Syllabus</dt><dd>Samacheer Kalvi, Class 10</dd></div>
+        <div><dt>Subjects</dt><dd>Tamil, English, Maths, Science, Social Science</dd></div>
+        <div><dt>Output</dt><dd>Print-ready paper with school header</dd></div>
+      </dl>
+    </div>
+
+    <!-- ---------- the live miniature ---------- -->
+    <div class="mini">
+      <div class="mini-head">
+        <h3>The blueprint, in miniature</h3>
+        <p>This is the planning step TestCraft runs before it asks for a single question. Choose a subject and a paper and watch the parts and marks rearrange themselves.</p>
+      </div>
+      <div class="mini-body">
+        <div class="controls">
+          <div class="cgroup">
+            <span id="l-sub">Subject</span>
+            <div class="chips" role="group" aria-labelledby="l-sub" id="c-subject"></div>
+          </div>
+          <div class="cgroup">
+            <span id="l-pap">Paper</span>
+            <div class="chips" role="group" aria-labelledby="l-pap" id="c-paper"></div>
+          </div>
+          <div class="cgroup">
+            <span id="l-med">Medium</span>
+            <div class="chips" role="group" aria-labelledby="l-med" id="c-medium"></div>
+            <p class="locked" id="lockmsg"></p>
+          </div>
+        </div>
+
+        <div class="paper-out">
+          <div class="paper-head">
+            <p class="paper-school">School or tuition name</p>
+            <p class="paper-title" id="p-title">Unit Test &mdash; Science</p>
+            <div class="paper-meta"><span id="p-time">Time: 1&frac12; hours</span><span id="p-medium">English medium</span></div>
+          </div>
+          <ul class="rows" id="p-rows"></ul>
+          <div class="paper-total">
+            <span id="p-totlabel">Total marks</span>
+            <b id="p-total">50</b>
+          </div>
+          <p class="paper-note" id="p-note"></p>
+        </div>
+      </div>
+      <div class="mini-foot">
+        <span>In the real app every slot below is filled with a question from the chapters you tick.</span>
+        <a href="https://test-paper-generator-omega.vercel.app/" target="_blank" rel="noopener">Open TestCraft</a>
+      </div>
+    </div>
+
+    <!-- ---------- other projects ---------- -->
+    <div class="proj">
+      <article>
+        <div>
+          <h3>Clinic Appointment &amp; Management System</h3>
+          <p class="built">React, Node.js, Express, MongoDB</p>
+          <p>A small clinic runs on a paper diary and a phone that keeps ringing. This replaces both: patients book a slot against a doctor&rsquo;s real availability, records stay with the patient rather than in a folder, and the front desk gets one dashboard for the day instead of three notebooks.</p>
+          <p>Built on an MVC split so the routing, the business rules and the data access stay in separate places, with REST endpoints behind JWT authentication for every operation.</p>
+          <div class="links">
+            <a href="https://github.com/RiyazHaroon5347/clinic-management-system" target="_blank" rel="noopener">Source on GitHub</a>
+          </div>
+        </div>
+        <div class="figs">
+          <div><b>4 roles</b><span>Patient, doctor, front desk and admin, each with their own view</span></div>
+          <div><b>JWT</b><span>Token authentication guarding every route</span></div>
+        </div>
+      </article>
+
+      <article>
+        <div>
+          <h3>Movie Recommendation System</h3>
+          <p class="built">Python, Streamlit, TF-IDF, TMDB API</p>
+          <p>Content-based recommendation over a catalogue of more than five thousand films. Each title becomes a vector of its own description and metadata, and a similarity search returns the neighbours &mdash; no ratings, no cold-start problem, just the film in front of you.</p>
+          <p>Posters and metadata come live from the TMDB API, and the whole thing runs on Streamlit Cloud so it can be opened from a link rather than cloned and installed.</p>
+          <div class="links">
+            <a href="https://movie-recommender-fposgrzimb7le8sgfet7pn.streamlit.app" target="_blank" rel="noopener">Open the live app</a>
+          </div>
+        </div>
+        <div class="figs">
+          <div><b>5,000+</b><span>Titles indexed for similarity search</span></div>
+          <div><b>40%</b><span>Faster search after moving to vector similarity</span></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===================== EXPERIENCE ===================== -->
+  <section class="sec wrap" id="experience">
+    <div class="sechead">
+      <h2>Where I work</h2>
+      <p>Shipping into a live product</p>
+    </div>
+
+    <div class="role">
+      <div>
+        <h3>Junior Developer</h3>
+        <p class="where">Dafy Online Pvt Ltd<br>Cochin, Kerala</p>
+        <p class="when">October 2025 &mdash; present</p>
+      </div>
+      <ul class="did">
+        <li>Built and maintained the admin dashboard modules in React and Node.js that the team uses to manage <span class="fig">10,000+</span> records &mdash; DataGrid filtering, pagination and CSV export, on data volumes where a naive table stops being usable.</li>
+        <li>Cut redundant API calls by <span class="fig">25%</span> by debouncing input-driven requests and de-duplicating ones already in flight. The dashboard got noticeably quicker to load, on the same backend.</li>
+        <li>Traced and fixed booking workflow bugs that had been producing inconsistent state across the platform &mdash; the kind that shows up as a booking that looks confirmed on one screen and pending on another.</li>
+      </ul>
+    </div>
+
+    <div class="edu">
+      <div>
+        <h3>B.Tech, Artificial Intelligence and Data Science</h3>
+        <p>Erode Sengunthar Engineering College, 2021&ndash;2025</p>
+      </div>
+      <p class="cgpa">CGPA 8.04</p>
+    </div>
+  </section>
+
+  <!-- ===================== STACK ===================== -->
+  <section class="sec wrap" id="stack">
+    <div class="sechead">
+      <h2>What I build with</h2>
+      <p>Grouped by where it sits</p>
+    </div>
+    <dl class="stack">
+      <div><dt>Languages</dt><dd>JavaScript <i>/</i> Python <i>/</i> SQL</dd></div>
+      <div><dt>On the screen</dt><dd>React <i>/</i> Next.js <i>/</i> Zustand <i>/</i> Material UI <i>/</i> HTML5 <i>/</i> CSS3</dd></div>
+      <div><dt>On the server</dt><dd>Node.js <i>/</i> Express <i>/</i> REST APIs <i>/</i> JWT authentication</dd></div>
+      <div><dt>Where the data sits</dt><dd>MongoDB <i>/</i> MySQL</dd></div>
+      <div><dt>Models and retrieval</dt><dd>Gemini API with structured JSON output <i>/</i> TF-IDF <i>/</i> vector similarity</dd></div>
+      <div><dt>Day to day</dt><dd>Git <i>/</i> GitHub <i>/</i> Postman <i>/</i> Vercel <i>/</i> Streamlit</dd></div>
+      <div><dt>Foundations</dt><dd>MVC <i>/</i> object-oriented design <i>/</i> data structures and algorithms</dd></div>
+    </dl>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section class="sec contact" id="contact">
+    <div class="wrap contact-in">
+      <div>
+        <h2>Looking for a team that ships often</h2>
+        <p>If you are hiring for a full stack role &mdash; or you have a build in mind and want to talk it through &mdash; the fastest way to reach me is email.</p>
+        <a class="mailto" href="mailto:mohamedriyaz0666@gmail.com">mohamedriyaz0666@gmail.com</a>
+      </div>
+      <div class="reach">
+        <a href="tel:+917904137854"><span class="k">Phone</span><span class="v">+91 79041 37854</span></a>
+        <a href="https://www.linkedin.com/in/mohamed-riyaz-m-76909923a" target="_blank" rel="noopener"><span class="k">LinkedIn</span><span class="v">mohamed-riyaz-m</span></a>
+        <a href="https://github.com/RiyazHaroon5347" target="_blank" rel="noopener"><span class="k">GitHub</span><span class="v">RiyazHaroon5347</span></a>
+        <a href="assets/Mohamed_Riyaz_M_Resume.pdf" download><span class="k">Resume</span><span class="v">Download PDF <span aria-hidden="true">&#8595;</span></span></a>
+        <p><span class="k">Based in</span><span class="v">Tenkasi, Tamil Nadu</span></p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="wrap">
+    <div class="foot-in">
+      <span>&copy; <span id="yr">2026</span> Mohamed Riyaz M</span>
+      <em>A static page. No framework, no tracking, nothing to install.</em>
+    </div>
+  </footer>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
