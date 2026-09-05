@@ -154,7 +154,11 @@ p:last-child { margin-bottom: 0; }
 .now { grid-column: 1 / -1; }
 @media (max-width: 900px) {
   .hero { grid-template-columns: 1fr; }
-  .portrait { max-width: 230px; margin-top: clamp(28px, 5vw, 40px); }
+  .portrait {
+    max-width: 420px; aspect-ratio: 4 / 5;
+    margin-top: clamp(28px, 5vw, 40px);
+  }
+    .portrait img { height: 100%; object-fit: cover; object-position: 50% 45%; }
 }
 .hero-name {
   font-family: var(--ff-d); font-size: clamp(15px, 1.6vw, 17px); font-weight: 600;
