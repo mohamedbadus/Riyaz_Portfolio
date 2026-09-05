@@ -83,7 +83,7 @@ p:last-child { margin-bottom: 0; }
 .skip:focus { left: 0; }
 
 .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--gut); }
-.sec  { padding: clamp(60px, 9vw, 116px) 0; }
+.sec  { padding-block: clamp(60px, 9vw, 116px); }
 .lede { max-width: 61ch; }
 
 /* ---------------- top bar ---------------- */
@@ -140,7 +140,7 @@ p:last-child { margin-bottom: 0; }
 
 /* ---------------- hero ---------------- */
 
-.hero { padding: clamp(56px, 11vh, 128px) 0 clamp(52px, 8vw, 96px); }
+.hero { padding-block: clamp(56px, 11vh, 128px) clamp(52px, 8vw, 96px); }
 .hero-name {
   font-family: var(--ff-d); font-size: clamp(15px, 1.6vw, 17px); font-weight: 600;
   color: var(--pine); letter-spacing: -.005em; margin: 0 0 clamp(18px, 2.4vw, 26px);
@@ -153,7 +153,7 @@ p:last-child { margin-bottom: 0; }
 }
 .h1 em {
   display: block; font-family: var(--ff-b); font-style: italic; font-weight: 380;
-  font-size: .40em; line-height: 1.18; letter-spacing: -.012em;
+  font-size: max(20px, .40em); line-height: 1.2; letter-spacing: -.012em;
   color: var(--ink-2); margin-top: .34em; max-width: 22ch;
 }
 .hero-lede { font-size: 1.06em; max-width: 58ch; color: var(--ink-2); }
@@ -251,6 +251,7 @@ p:last-child { margin-bottom: 0; }
 .chip[aria-pressed="true"] { background: var(--pine); border-color: var(--pine); color: #fff; }
 [data-theme="dark"] .chip[aria-pressed="true"] { color: #06120d; }
 .chip:disabled { opacity: .38; cursor: not-allowed; }
+.chip:disabled[aria-pressed="true"] { opacity: 1; }
 .locked { margin: 10px 0 0; font-size: 15.5px; font-style: italic; color: var(--ink-3); min-height: 1.4em; }
 
 /* the paper */
@@ -383,7 +384,7 @@ p:last-child { margin-bottom: 0; }
 .reach .k { font-style: italic; color: var(--ink-3); font-size: 16.5px; flex: none; }
 .reach .v { font-family: var(--ff-d); font-weight: 500; font-size: 16px; letter-spacing: -.008em; text-align: right; }
 
-footer { padding: 30px 0 44px; }
+footer.wrap { padding-block: 30px 44px; }
 .foot-in { display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: baseline; font-size: 16px; color: var(--ink-3); }
 .foot-in em { font-style: italic; }
 
