@@ -142,23 +142,36 @@ p:last-child { margin-bottom: 0; }
 
 .hero {
   padding-block: clamp(56px, 11vh, 128px) clamp(52px, 8vw, 96px);
-  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 320px);
-  gap: 0 clamp(32px, 5vw, 76px); align-items: end;
+  display: grid; align-items: start;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 320px);
+  grid-template-areas:
+    "name portrait"
+    "copy portrait"
+    "now  now";
+  gap: 0 clamp(32px, 5vw, 76px);
 }
-.hero-copy { min-width: 0; }
+.hero-name { grid-area: name; }
+.hero-copy { grid-area: copy; min-width: 0; }
+.now       { grid-area: now; }
 .portrait {
-  margin: 0; align-self: end; isolation: isolate; overflow: hidden;
+  grid-area: portrait; align-self: end;
+  margin: 0; isolation: isolate; overflow: hidden;
   background: var(--plate); border-radius: 16px;
 }
 .portrait img { width: 100%; mix-blend-mode: multiply; }
-.now { grid-column: 1 / -1; }
+
+/* on one column the portrait belongs with the name, not stranded below the
+   buttons - and it goes wide and shallow so the headline stays near the top */
 @media (max-width: 900px) {
-  .hero { grid-template-columns: 1fr; }
-  .portrait {
-    max-width: 420px; aspect-ratio: 4 / 5;
-    margin-top: clamp(28px, 5vw, 40px);
+  .hero {
+    grid-template-columns: 1fr;
+    grid-template-areas: "name" "portrait" "copy" "now";
   }
-    .portrait img { height: 100%; object-fit: cover; object-position: 50% 45%; }
+  .portrait {
+    max-width: 460px; aspect-ratio: 5 / 4;
+    margin-bottom: clamp(26px, 4.5vw, 36px);
+  }
+  .portrait img { height: 100%; object-fit: cover; object-position: 50% 15%; }
 }
 .hero-name {
   font-family: var(--ff-d); font-size: clamp(15px, 1.6vw, 17px); font-weight: 600;
@@ -316,7 +329,6 @@ p:last-child { margin-bottom: 0; }
 
 footer.wrap { padding-block: 30px 44px; }
 .foot-in { display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: baseline; font-size: 16px; color: var(--ink-3); }
-.foot-in em { font-style: italic; }
 
 /* ---------------- one page-load sequence ---------------- */
 
