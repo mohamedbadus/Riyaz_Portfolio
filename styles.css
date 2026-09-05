@@ -145,13 +145,17 @@ p:last-child { margin-bottom: 0; }
   display: grid; align-items: start;
   grid-template-columns: minmax(0, 1fr) minmax(0, 320px);
   grid-template-areas:
-    "name portrait"
-    "copy portrait"
-    "now  now";
+    "name  portrait"
+    "title portrait"
+    "lede  portrait"
+    "cta   portrait"
+    "now   now";
   gap: 0 clamp(32px, 5vw, 76px);
 }
 .hero-name { grid-area: name; }
-.hero-copy { grid-area: copy; min-width: 0; }
+.h1        { grid-area: title; }
+.hero-lede { grid-area: lede; }
+.cta       { grid-area: cta; }
 .now       { grid-area: now; }
 .portrait {
   grid-area: portrait; align-self: end;
@@ -160,18 +164,21 @@ p:last-child { margin-bottom: 0; }
 }
 .portrait img { width: 100%; mix-blend-mode: multiply; }
 
-/* on one column the portrait belongs with the name, not stranded below the
-   buttons - and it goes wide and shallow so the headline stays near the top */
+/* narrow: the photo stays beside the name and headline, and the lede and
+   buttons run the full width underneath it */
 @media (max-width: 900px) {
   .hero {
-    grid-template-columns: 1fr;
-    grid-template-areas: "name" "portrait" "copy" "now";
+    grid-template-columns: minmax(0, 1fr) clamp(122px, 32vw, 250px);
+    grid-template-areas:
+      "name  portrait"
+      "title portrait"
+      "lede  lede"
+      "cta   cta"
+      "now   now";
+    gap: 0 clamp(14px, 3.6vw, 32px);
   }
-  .portrait {
-    max-width: 460px; aspect-ratio: 5 / 4;
-    margin-bottom: clamp(26px, 4.5vw, 36px);
-  }
-  .portrait img { height: 100%; object-fit: cover; object-position: 50% 15%; }
+  .portrait { align-self: start; aspect-ratio: 4 / 5; border-radius: 12px; }
+  .portrait img { height: 100%; object-fit: cover; object-position: 50% 28%; }
 }
 .hero-name {
   font-family: var(--ff-d); font-size: clamp(15px, 1.6vw, 17px); font-weight: 600;
@@ -179,7 +186,7 @@ p:last-child { margin-bottom: 0; }
 }
 .h1 {
   font-family: var(--ff-d); font-weight: 700;
-  font-size: clamp(42px, 8.4vw, 94px);
+  font-size: clamp(36px, 8.4vw, 94px);
   line-height: .95; letter-spacing: -.038em;
   margin: 0 0 clamp(24px, 3.2vw, 36px); max-width: 13ch;
 }
@@ -212,6 +219,20 @@ p:last-child { margin-bottom: 0; }
 }
 .now b { font-family: var(--ff-d); font-weight: 600; color: var(--ink); font-size: 16.5px; }
 .now .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--pine-2); display: inline-block; margin-right: 9px; }
+
+/* phone: the whole hero — name, headline, lede, buttons and the standfirst —
+   has to land inside one screen, so the type steps down and the air comes out */
+@media (max-width: 560px) {
+  body { font-size: 17px; }
+  .hero { padding-block: clamp(24px, 5vh, 44px) clamp(34px, 6vw, 52px); }
+  .hero-name { margin-bottom: 12px; }
+  .h1 { margin-bottom: 20px; }
+  .hero-lede { font-size: 1em; }
+  .cta { margin-top: 22px; gap: 9px; }
+  .btn { font-size: 14.5px; padding: 9px 15px; }
+  .now { margin-top: 24px; padding-top: 14px; font-size: 15.5px; gap: 4px 18px; }
+  .now b { font-size: 15px; }
+}
 
 /* ---------------- section heading ---------------- */
 
