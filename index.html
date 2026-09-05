@@ -14,7 +14,7 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='26' fill='%230d5a42'/><text y='67' x='50' text-anchor='middle' font-family='Helvetica,Arial' font-size='44' font-weight='700' fill='%23fff'>MR</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400..700&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..600&family=Noto+Sans+Tamil:wght@400..600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400..700&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -74,6 +74,9 @@
         <p>Writing a question paper by hand is a slow, fiddly job. A teacher has to hold the whole blueprint in their head &mdash; how many one-mark questions, which chapters are in scope this term, how the marks add to a hundred &mdash; and then type the thing out and format it so it prints cleanly.</p>
         <p>TestCraft takes the blueprint as input instead. You tick the chapters you have covered, choose the paper you want, and it plans the parts, fills each slot with questions drawn from those chapters, and lays the result out ready for the photocopier. It is built for the Tamil Nadu Samacheer Kalvi Class&nbsp;10 syllabus, across all five subjects, in English medium, Tamil medium or both side by side.</p>
         <p>The interesting part is not the prompt. It is the contract around it: Gemini Flash is asked for a strict JSON object matching the blueprint the app has already decided on, so the generated paper is checked against the plan before a single line reaches the page.</p>
+        <div class="links">
+          <a href="https://test-paper-generator-omega.vercel.app/" target="_blank" rel="noopener">Open TestCraft</a>
+        </div>
       </div>
       <dl class="spec">
         <div><dt>Built with</dt><dd>Next.js</dd></div>
@@ -83,49 +86,6 @@
         <div><dt>Subjects</dt><dd>Tamil, English, Maths, Science, Social Science</dd></div>
         <div><dt>Output</dt><dd>Print-ready paper with school header</dd></div>
       </dl>
-    </div>
-
-    <!-- ---------- the live miniature ---------- -->
-    <div class="mini">
-      <div class="mini-head">
-        <h3>The blueprint, in miniature</h3>
-        <p>This is the planning step TestCraft runs before it asks for a single question. Choose a subject and a paper and watch the parts and marks rearrange themselves.</p>
-      </div>
-      <div class="mini-body">
-        <div class="controls">
-          <div class="cgroup">
-            <span id="l-sub">Subject</span>
-            <div class="chips" role="group" aria-labelledby="l-sub" id="c-subject"></div>
-          </div>
-          <div class="cgroup">
-            <span id="l-pap">Paper</span>
-            <div class="chips" role="group" aria-labelledby="l-pap" id="c-paper"></div>
-          </div>
-          <div class="cgroup">
-            <span id="l-med">Medium</span>
-            <div class="chips" role="group" aria-labelledby="l-med" id="c-medium"></div>
-            <p class="locked" id="lockmsg"></p>
-          </div>
-        </div>
-
-        <div class="paper-out">
-          <div class="paper-head">
-            <p class="paper-school">School or tuition name</p>
-            <p class="paper-title" id="p-title">Unit Test &mdash; Science</p>
-            <div class="paper-meta"><span id="p-time">Time: 1&frac12; hours</span><span id="p-medium">English medium</span></div>
-          </div>
-          <ul class="rows" id="p-rows"></ul>
-          <div class="paper-total">
-            <span id="p-totlabel">Total marks</span>
-            <b id="p-total">50</b>
-          </div>
-          <p class="paper-note" id="p-note"></p>
-        </div>
-      </div>
-      <div class="mini-foot">
-        <span>Every slot above becomes a real question, drawn from the chapters you tick.</span>
-        <a href="https://test-paper-generator-omega.vercel.app/" target="_blank" rel="noopener">Open TestCraft</a>
-      </div>
     </div>
 
     <!-- ---------- other projects ---------- -->
