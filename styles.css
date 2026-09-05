@@ -20,6 +20,7 @@
   --pine-w:    #e3eee8;
   --plum:      #7e2749;
   --plum-w:    #f6e7ec;
+  --plate:     #e7eae2;
   --lift:      0 1px 2px rgba(20,28,24,.04), 0 14px 34px -22px rgba(20,28,24,.30);
   --lift-2:    0 24px 60px -34px rgba(13,90,66,.45);
 
@@ -46,6 +47,7 @@
   --pine-w:    #14291f;
   --plum:      #f394b4;
   --plum-w:    #2e1620;
+  --plate:     #dde3da;
   --lift:      0 1px 2px rgba(0,0,0,.5), 0 16px 40px -26px rgba(0,0,0,.9);
   --lift-2:    0 26px 66px -34px rgba(0,0,0,.95);
 }
@@ -138,7 +140,22 @@ p:last-child { margin-bottom: 0; }
 
 /* ---------------- hero ---------------- */
 
-.hero { padding-block: clamp(56px, 11vh, 128px) clamp(52px, 8vw, 96px); }
+.hero {
+  padding-block: clamp(56px, 11vh, 128px) clamp(52px, 8vw, 96px);
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 320px);
+  gap: 0 clamp(32px, 5vw, 76px); align-items: end;
+}
+.hero-copy { min-width: 0; }
+.portrait {
+  margin: 0; align-self: end; isolation: isolate; overflow: hidden;
+  background: var(--plate); border-radius: 16px;
+}
+.portrait img { width: 100%; mix-blend-mode: multiply; }
+.now { grid-column: 1 / -1; }
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; }
+  .portrait { max-width: 230px; margin-top: clamp(28px, 5vw, 40px); }
+}
 .hero-name {
   font-family: var(--ff-d); font-size: clamp(15px, 1.6vw, 17px); font-weight: 600;
   color: var(--pine); letter-spacing: -.005em; margin: 0 0 clamp(18px, 2.4vw, 26px);
